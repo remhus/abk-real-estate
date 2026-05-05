@@ -63,7 +63,7 @@ export default function Home() {
                 <div className="relative border-b border-surface-container-lowest/50 pb-2">
                   <label className="block font-label-caps text-label-caps text-surface-container-lowest/70 mb-2">Category</label>
                   <select className="w-full bg-transparent border-none p-0 focus:ring-0 font-body-lg text-body-lg text-surface-container-lowest py-2 outline-none appearance-none cursor-pointer">
-                    <option value="" className="text-on-background">Residential or Commercial</option>
+                    <option value="" className="text-on-background">All</option>
                     <option value="residential" className="text-on-background">Residential</option>
                     <option value="commercial" className="text-on-background">Commercial</option>
                   </select>
@@ -71,7 +71,7 @@ export default function Home() {
                 <div className="relative border-b border-surface-container-lowest/50 pb-2">
                   <label className="block font-label-caps text-label-caps text-surface-container-lowest/70 mb-2">Listing Type</label>
                   <select className="w-full bg-transparent border-none p-0 focus:ring-0 font-body-lg text-body-lg text-surface-container-lowest py-2 outline-none appearance-none cursor-pointer">
-                    <option value="" className="text-on-background">Sales or Rentals</option>
+                    <option value="" className="text-on-background">All</option>
                     <option value="sale" className="text-on-background">Sales</option>
                     <option value="rental" className="text-on-background">Rentals</option>
                   </select>

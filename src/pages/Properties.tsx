@@ -107,7 +107,7 @@ export default function Properties() {
                   value={transactionFilter}
                   onChange={(e) => setTransactionFilter(e.target.value as Transaction)}
                 >
-                  <option value="All">Sales or Rentals</option>
+                  <option value="All">All Listings</option>
                   <option>Sales</option>
                   <option>Rentals</option>
                 </select>
@@ -151,7 +151,7 @@ export default function Properties() {
                   className="flex items-center gap-2 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors uppercase"
                   onClick={() => { setTransactionOpen(!transactionOpen); setCategoryOpen(false) }}
                 >
-                  <span>{transactionFilter === 'All' ? 'Sales or Rentals' : transactionFilter}</span>
+                  <span>{transactionFilter === 'All' ? 'Listing Type' : transactionFilter}</span>
                   <span className="material-symbols-outlined text-[16px]">expand_more</span>
                 </button>
                 {transactionOpen && (
