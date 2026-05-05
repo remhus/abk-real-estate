@@ -45,16 +45,22 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             >
-              <h1 className="font-display-lg text-5xl md:text-display-lg mb-6 md:mb-stack-md text-surface-container-lowest leading-tight">
+              <h1 className="font-display-lg text-4xl md:text-display-lg mb-4 md:mb-stack-md text-surface-container-lowest leading-tight">
                 Curated Estates in the Principality.
               </h1>
-              <p className="font-body-lg text-base md:text-body-lg text-surface-container-lowest/90 max-w-xl mb-8 md:mb-0">
+              <p className="font-body-lg text-sm md:text-body-lg text-surface-container-lowest/90 max-w-xl mb-8 md:mb-0">
                 Experience an unparalleled portfolio of off-market properties, penthouses, and heritage villas, managed with absolute discretion.
               </p>
+              <Link
+                to="/properties"
+                className="md:hidden inline-block py-4 px-8 border border-surface-container-lowest text-surface-container-lowest font-label-caps text-label-caps uppercase text-center hover:bg-surface-container-lowest hover:text-primary transition-colors duration-500"
+              >
+                Explore Collection
+              </Link>
             </motion.div>
 
             <motion.div
-              className="w-full md:w-auto bg-surface-container-lowest/10 backdrop-blur-md p-6 border border-surface-container-lowest/20 rounded-lg"
+              className="hidden md:block md:w-auto bg-surface-container-lowest/10 backdrop-blur-md p-6 border border-surface-container-lowest/20 rounded-lg"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.9, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}

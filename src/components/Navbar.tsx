@@ -30,7 +30,7 @@ export default function Navbar() {
           scrolled ? 'bg-surface-container-lowest/95 backdrop-blur-md shadow-sm' : 'bg-surface-container-lowest/90 backdrop-blur-md'
         }`}
       >
-        <div className="flex justify-between items-center w-full px-12 py-8 max-w-container-max mx-auto">
+        <div className="flex justify-between items-center w-full px-6 py-5 md:px-12 md:py-8 max-w-container-max mx-auto">
           <Link
             to="/"
             className="text-xl font-light tracking-[0.25em] text-primary uppercase transition-opacity duration-500 hover:opacity-60"
@@ -92,9 +92,9 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
-            className="fixed top-[89px] left-0 right-0 z-40 bg-surface-container-lowest/98 backdrop-blur-md border-b border-outline-variant/30 md:hidden"
+            className="fixed top-[66px] left-0 right-0 z-40 bg-surface-container-lowest/98 backdrop-blur-md border-b border-outline-variant/30 md:hidden"
           >
-            <div className="flex flex-col px-12 py-8 gap-8">
+            <div className="flex flex-col px-6 pt-10 pb-8 gap-8">
               {navLinks.map(({ to, label }) => (
                 <Link
                   key={to}
