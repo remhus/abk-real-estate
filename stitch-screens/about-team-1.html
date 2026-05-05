@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About &amp; Team - ABK Real Estate Monaco</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&amp;family=Noto+Serif:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#fdf9f5",
+                    "on-primary-container": "#b97676",
+                    "inverse-primary": "#ffb3b2",
+                    "error": "#ba1a1a",
+                    "tertiary": "#110700",
+                    "on-surface": "#1c1c19",
+                    "on-primary-fixed": "#370d0f",
+                    "on-secondary-container": "#666368",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#48464a",
+                    "surface-container": "#f1ede9",
+                    "secondary-fixed-dim": "#c9c5ca",
+                    "surface": "#fdf9f5",
+                    "primary-fixed": "#ffdad9",
+                    "on-tertiary-container": "#a88150",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed": "#e5e1e6",
+                    "on-surface-variant": "#524343",
+                    "outline-variant": "#d7c2c1",
+                    "on-tertiary": "#ffffff",
+                    "surface-variant": "#e6e2de",
+                    "surface-dim": "#ddd9d5",
+                    "surface-container-high": "#ebe7e4",
+                    "secondary-container": "#e5e1e6",
+                    "on-error": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#5f4115",
+                    "surface-tint": "#894e4e",
+                    "on-tertiary-fixed": "#2a1800",
+                    "tertiary-container": "#311c00",
+                    "secondary": "#605e62",
+                    "surface-container-low": "#f7f3ef",
+                    "on-background": "#1c1c19",
+                    "on-primary": "#ffffff",
+                    "primary": "#1f0002",
+                    "background": "#fdf9f5",
+                    "surface-container-highest": "#e6e2de",
+                    "outline": "#857372",
+                    "on-secondary-fixed": "#1c1b1e",
+                    "on-primary-fixed-variant": "#6d3737",
+                    "primary-fixed-dim": "#ffb3b2",
+                    "inverse-surface": "#31302e",
+                    "primary-container": "#3e1214",
+                    "inverse-on-surface": "#f4f0ec",
+                    "tertiary-fixed-dim": "#ecbf88",
+                    "tertiary-fixed": "#ffddb6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-padding": "8rem",
+                    "container-max": "1440px",
+                    "stack-lg": "3rem",
+                    "stack-md": "1.5rem",
+                    "stack-sm": "0.5rem",
+                    "gutter": "2rem"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Noto Serif", "serif"],
+                    "body-md": ["Manrope", "sans-serif"],
+                    "body-lg": ["Manrope", "sans-serif"],
+                    "label-caps": ["Manrope", "sans-serif"],
+                    "headline-md": ["Noto Serif", "serif"],
+                    "display-lg": ["Noto Serif", "serif"]
+            },
+            "fontSize": {
+                    "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                    "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                    "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "300" }],
+                    "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                    "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "400" }],
+                    "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }]
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 w-full z-50 bg-[#FFFFFF]/90 backdrop-blur-md border-b border-stone-100 ease-in-out duration-500">
+<div class="flex justify-between items-center w-full px-12 py-8 max-w-container-max mx-auto">
+<!-- Brand Logo -->
+<a class="text-xl font-light tracking-[0.25em] text-[#3E1214] uppercase" href="#">ABK REAL ESTATE MONACO</a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex gap-12 items-center">
+<a class="font-serif tracking-[0.15em] text-[11px] uppercase text-stone-400 hover:text-[#3E1214] transition-colors duration-700" href="#">Properties</a>
+<a class="font-serif tracking-[0.15em] text-[11px] uppercase text-[#3E1214] border-b border-[#3E1214] pb-1" href="#">About</a>
+<a class="font-serif tracking-[0.15em] text-[11px] uppercase text-stone-400 hover:text-[#3E1214] transition-colors duration-700" href="#">Contact</a>
+</nav>
+<!-- Trailing Action & Search -->
+<div class="flex items-center gap-8">
+<button aria-label="Search" class="text-stone-400 hover:text-[#3E1214] transition-colors duration-700">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
+</button>
+<a class="font-serif tracking-[0.15em] text-[11px] uppercase text-[#3E1214] border border-[#3E1214] px-6 py-3 hover:bg-[#3E1214] hover:text-[#FFFFFF] transition-colors duration-700" href="#">Private Office</a>
+</div>
+</div>
+</header>
+<main class="pt-[140px]">
+<!-- Hero Section -->
+<section class="relative w-full h-[716px] min-h-[600px] flex items-center justify-center">
+<div class="absolute inset-0 z-0 bg-surface-container-low">
+<img alt="Monaco Cityscape" class="w-full h-full object-cover opacity-60 mix-blend-luminosity" data-alt="A breathtaking, wide-angle architectural shot of the Monaco skyline and harbor at dusk. The scene is bathed in soft, muted natural light, emphasizing a quiet luxury aesthetic. High-contrast monochromatic tones with subtle hints of warm ambient light from the buildings create a sophisticated, editorial mood. The composition relies on extensive whitespace in the sky to frame the dense, luxurious real estate below." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZSl_vJ7GYA1g3GFB__Hqc6kQv-KcT9ENtuomPjKP81PSO4c8unOuO0EKUVUazpPrE6o0FydB4y_n3l_Hc8Ie6rBfvRmq703uknTovr_HY3u9vIVv98mXu55Fia1uhtfOb2fwveqhEOVQenHJJsIkj13cf_XbK10RIbfcGZeyUOHgtH6NmsqLp17WphJRFxiGEtwnjU-MojVYYF1lby-jZTLm5wDeQWHbdDJCumhFDNJsw1CdcAzcHqIJMmKmL6B7PaN9gBRxy7gw"/>
+<div class="absolute inset-0 bg-gradient-to-b from-background/40 to-background/90"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-12 text-center">
+<span class="block font-label-caps text-label-caps text-primary-container mb-stack-md uppercase">Heritage &amp; Vision</span>
+<h1 class="font-display-lg text-display-lg text-primary max-w-4xl mx-auto">Architects of the Monaco Lifestyle.</h1>
+</div>
+</section>
+<!-- History Section (Asymmetrical Layout) -->
+<section class="py-section-padding px-12 max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-5 lg:col-start-2">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-md">A Legacy Built on Discretion.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-md">
+                        Since our inception, ABK Real Estate has operated at the intersection of architectural heritage and modern luxury. We do not merely facilitate transactions; we curate environments that define the pinnacle of Mediterranean living.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Our approach is rooted in the principles of quiet luxury—where substance is felt rather than announced. We serve a discerning global clientele seeking not just a property, but a sanctuary within the Principality.
+                    </p>
+</div>
+<div class="lg:col-span-5 lg:col-start-8 mt-12 lg:mt-0 relative">
+<div class="aspect-[3/4] bg-surface-container w-full overflow-hidden">
+<img alt="Luxury Interior Detail" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out" data-alt="A close-up, high-end editorial photograph of a minimalist architectural detail inside a luxury Monaco residence. The lighting is soft and diffused, casting gentle shadows that highlight the textures of natural stone and brushed metal. The color palette is strictly neutral, focusing on pristine whites, deep blacks, and warm stone hues. The image conveys a sense of calm, exclusivity, and understated elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjNg3DKcSVjJbt1Np95Q2lU2Z3HMnQYzF3Jt-WtH8uw8pjCBCHpiY9DjCRPSDZS-C1xJdFg3pKoboqILRRrgRzig5ni4mxUb5kAsMHMFU5MgSqZeEiGrmDmpHb3Gx_KlCvBeAA_zX_m77UKSpd4AMQlAuC2MErDSePLtKDkG_9FvzPwDXFeAVwCVDSIdG4lFi1is0fr0z5YG7puPjW_1ybcNQ37bO2QjaTlCQ1EA0M26EUQjTv8zqaN9XfECMjBgRBdWD1Qa5ZzPo"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Section (Bento Grid / Gallery) -->
+<section class="py-section-padding px-12 max-w-container-max mx-auto bg-surface-container-low rounded-xl">
+<div class="text-center mb-stack-lg">
+<span class="block font-label-caps text-label-caps text-primary-container mb-stack-sm uppercase">Our People</span>
+<h2 class="font-headline-md text-headline-md text-primary">The Principals</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Team Member 1 -->
+<div class="group flex flex-col items-center">
+<div class="w-full aspect-[3/4] overflow-hidden mb-stack-md bg-surface">
+<img alt="Managing Director Portrait" class="w-full h-full object-cover grayscale transition-transform duration-1000 group-hover:scale-105" data-alt="A striking, high-contrast black and white portrait of a sophisticated male real estate professional. He is dressed in a tailored, minimalist dark suit, positioned against a plain, brightly lit white background to create a gallery-like effect. The lighting is cinematic yet soft, highlighting his calm, authoritative expression. The aesthetic is strictly editorial and adheres to a quiet luxury brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnhxjXLfXPtJ78n2ym9WwnOyxAConba9P859iMC6HmX7mnmCuxxlkW49LsM0Bsnptjf2sNQ2riSgXKZOozSrZymmr_z9Le7TTRMo7xF_IevrE1sEioW41UM8ed7gW2V0tnFhnbP2XMo_qZIiTCnRwprpL2LQ17yNGQ1_lGwb5ssf874tptY5nUQHs6ZwXvjfRvQs3rmzlfw2LtuWQtTEp2VBSmLNSZdJ983NBom_ePuOhrtl_P_Bk7YlPyNwHAZXSC5y7Y9V699_w"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary text-center">Arthur B. Klein</h3>
+<span class="font-label-caps text-label-caps text-outline uppercase mt-2">Managing Director</span>
+</div>
+<!-- Team Member 2 -->
+<div class="group flex flex-col items-center lg:-mt-12">
+<div class="w-full aspect-[3/4] overflow-hidden mb-stack-md bg-surface">
+<img alt="Head of Acquisitions Portrait" class="w-full h-full object-cover grayscale transition-transform duration-1000 group-hover:scale-105" data-alt="A striking, high-contrast black and white portrait of a sophisticated female real estate professional. She is dressed in tailored, minimalist dark attire, positioned against a plain, brightly lit white background to create a gallery-like effect. The lighting is cinematic yet soft, highlighting her calm, professional expression. The aesthetic is strictly editorial and adheres to a quiet luxury brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcCsYufpH7wPKSnc9qHFZ3F38DtrgtuCz0fflFsjTakexB0pBjeFpG-9lL1B1t1vVBWgvF3kf_08yilb7cSMyNUsj8YWBkDMxzG1qwuU4DSMKnkCJ5z0T-E9Voq4ivXDDh3ZIX2QRQ2cnT32U26Ilm-OsmD0baKeO78uFMWgYTDwDUA8eK5qUy2IVFv8xq-KHEhKym74vG7tF_6R9MKkt6SJrtQ2uKR0xg25-MtGoQQ4ODU30Dpt7lr9UQgA65BiFIA3QIxouEmlY"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary text-center">Eleanor Vance</h3>
+<span class="font-label-caps text-label-caps text-outline uppercase mt-2">Head of Acquisitions</span>
+</div>
+<!-- Team Member 3 -->
+<div class="group flex flex-col items-center">
+<div class="w-full aspect-[3/4] overflow-hidden mb-stack-md bg-surface">
+<img alt="Director of Private Office Portrait" class="w-full h-full object-cover grayscale transition-transform duration-1000 group-hover:scale-105" data-alt="A striking, high-contrast black and white portrait of a sophisticated male real estate professional. He is dressed in a tailored, minimalist light suit, positioned against a plain, brightly lit white background to create a gallery-like effect. The lighting is cinematic yet soft, highlighting his calm, observant expression. The aesthetic is strictly editorial and adheres to a quiet luxury brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzZKb47rxn-i6NCxx6HiY2oXiADtg6gn1QOy4TwkU_LAlzO8Siuz3rDFpzTcjrfUKAqH16hg6-FoCjTu8aLC1WIHv_ryjtwH-TcG0C_ARf20UWRQKLbiSCJ5Mt-dSXsNHrPVVUkCDcKjol3dxjHj4ErolA4oX2WATJTtVQ6CQX1f9ZYXHx5sFlCW7wTOn1hJf4V-um3ChRuFjZA7xW1chi8_vA6NhNM5W9HYZ1YVQY7Irddl7cb4tC1ZTBUzqNXpuMpT3Gj81TpP8"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary text-center">Julian Sterling</h3>
+<span class="font-label-caps text-label-caps text-outline uppercase mt-2">Director, Private Office</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full border-t border-stone-100 bg-[#FFFFFF] mt-section-padding">
+<div class="max-w-7xl mx-auto px-12 py-24 flex flex-col items-center gap-12">
+<!-- Brand Logo -->
+<div class="text-lg font-light tracking-[0.2em] text-[#3E1214] uppercase text-center">
+                ABK REAL ESTATE MONACO
+            </div>
+<!-- Links -->
+<nav class="flex flex-wrap justify-center gap-8">
+<a class="font-serif tracking-widest text-[10px] uppercase text-stone-400 hover:text-[#3E1214] transition-all duration-500" href="#">Legal Notice</a>
+<a class="font-serif tracking-widest text-[10px] uppercase text-stone-400 hover:text-[#3E1214] transition-all duration-500" href="#">Privacy Policy</a>
+<a class="font-serif tracking-widest text-[10px] uppercase text-stone-400 hover:text-[#3E1214] transition-all duration-500" href="#">Cookie Policy</a>
+<a class="font-serif tracking-widest text-[10px] uppercase text-stone-400 hover:text-[#3E1214] transition-all duration-500" href="#">Accessibility</a>
+</nav>
+<!-- Copyright -->
+<div class="font-serif tracking-widest text-[10px] uppercase text-stone-400 text-center">
+                © 2024 ABK Real Estate Monaco. All Rights Reserved.
+            </div>
+</div>
+</footer>
+</body></html>
