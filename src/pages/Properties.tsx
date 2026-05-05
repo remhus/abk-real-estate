@@ -4,8 +4,8 @@ import { motion, useInView } from 'framer-motion'
 import PageTransition from '../components/PageTransition'
 import { properties } from '../data/properties'
 
-type Filter = 'All' | 'Penthouse' | 'Apartment' | 'Villa'
-type District = 'All' | 'Monte Carlo' | 'Fontvieille' | 'La Rousse' | 'La Condamine'
+type Category = 'All' | 'Residential' | 'Commercial'
+type Transaction = 'All' | 'Sales' | 'Rentals'
 
 function PropertyCard({ property, index }: { property: typeof properties[0]; index: number }) {
   const ref = useRef<HTMLElement>(null)
@@ -58,15 +58,15 @@ function PropertyCard({ property, index }: { property: typeof properties[0]; ind
 }
 
 export default function Properties() {
-  const [typeFilter, setTypeFilter] = useState<Filter>('All')
-  const [districtFilter, setDistrictFilter] = useState<District>('All')
-  const [typeOpen, setTypeOpen] = useState(false)
-  const [neighborhoodOpen, setNeighborhoodOpen] = useState(false)
+  const [categoryFilter, setCategoryFilter] = useState<Category>('All')
+  const [transactionFilter, setTransactionFilter] = useState<Transaction>('All')
+  const [categoryOpen, setCategoryOpen] = useState(false)
+  const [transactionOpen, setTransactionOpen] = useState(false)
 
   const filtered = properties.filter((p) => {
-    const typeMatch = typeFilter === 'All' || p.category === typeFilter.toLowerCase()
-    const districtMatch = districtFilter === 'All' || p.district === districtFilter
-    return typeMatch && districtMatch
+    const categoryMatch = categoryFilter === 'All' || p.category === categoryFilter.toLowerCase()
+    const transactionMatch = transactionFilter === 'All' || p.transaction === (transactionFilter === 'Sales' ? 'sale' : 'rental')
+    return categoryMatch && transactionMatch
   })
 
   return (
@@ -95,30 +95,21 @@ export default function Properties() {
               <div className="p-4 border-t border-surface-variant flex flex-col gap-4 bg-surface">
                 <select
                   className="w-full bg-surface border border-outline-variant rounded px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-primary"
-                  value={districtFilter}
-                  onChange={(e) => setDistrictFilter(e.target.value as District)}
+                  value={categoryFilter}
+                  onChange={(e) => setCategoryFilter(e.target.value as Category)}
                 >
-                  <option value="All">Neighborhood</option>
-                  <option>Monte Carlo</option>
-                  <option>Fontvieille</option>
-                  <option>La Rousse</option>
-                  <option>La Condamine</option>
+                  <option value="All">Category</option>
+                  <option>Residential</option>
+                  <option>Commercial</option>
                 </select>
                 <select
                   className="w-full bg-surface border border-outline-variant rounded px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-primary"
-                  value={typeFilter}
-                  onChange={(e) => setTypeFilter(e.target.value as Filter)}
+                  value={transactionFilter}
+                  onChange={(e) => setTransactionFilter(e.target.value as Transaction)}
                 >
-                  <option value="All">Property Type</option>
-                  <option>Penthouse</option>
-                  <option>Apartment</option>
-                  <option>Villa</option>
-                </select>
-                <select className="w-full bg-surface border border-outline-variant rounded px-4 py-3 font-body-md text-on-surface focus:outline-none focus:border-primary">
-                  <option>Price Range</option>
-                  <option>Under €5M</option>
-                  <option>€5M – €10M</option>
-                  <option>€10M+</option>
+                  <option value="All">Sales or Rentals</option>
+                  <option>Sales</option>
+                  <option>Rentals</option>
                 </select>
               </div>
             </details>
@@ -135,20 +126,20 @@ export default function Properties() {
               <div className="relative">
                 <button
                   className="flex items-center gap-2 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors uppercase"
-                  onClick={() => { setNeighborhoodOpen(!neighborhoodOpen); setTypeOpen(false) }}
+                  onClick={() => { setCategoryOpen(!categoryOpen); setTransactionOpen(false) }}
                 >
-                  <span>Neighborhood</span>
+                  <span>{categoryFilter === 'All' ? 'Category' : categoryFilter}</span>
                   <span className="material-symbols-outlined text-[16px]">expand_more</span>
                 </button>
-                {neighborhoodOpen && (
+                {categoryOpen && (
                   <div className="absolute top-full left-0 mt-4 w-48 bg-surface border border-surface-variant z-10 shadow-sm">
-                    {(['All', 'Monte Carlo', 'Fontvieille', 'La Rousse', 'La Condamine'] as District[]).map((d) => (
+                    {(['All', 'Residential', 'Commercial'] as Category[]).map((c) => (
                       <button
-                        key={d}
-                        onClick={() => { setDistrictFilter(d); setNeighborhoodOpen(false) }}
-                        className={`block w-full text-left px-6 py-4 font-body-md text-body-md hover:bg-surface-container transition-colors ${districtFilter === d ? 'text-primary' : 'text-on-surface'}`}
+                        key={c}
+                        onClick={() => { setCategoryFilter(c); setCategoryOpen(false) }}
+                        className={`block w-full text-left px-6 py-4 font-body-md text-body-md hover:bg-surface-container transition-colors ${categoryFilter === c ? 'text-primary' : 'text-on-surface'}`}
                       >
-                        {d}
+                        {c === 'All' ? 'All Categories' : c}
                       </button>
                     ))}
                   </div>
@@ -158,30 +149,25 @@ export default function Properties() {
               <div className="relative">
                 <button
                   className="flex items-center gap-2 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors uppercase"
-                  onClick={() => { setTypeOpen(!typeOpen); setNeighborhoodOpen(false) }}
+                  onClick={() => { setTransactionOpen(!transactionOpen); setCategoryOpen(false) }}
                 >
-                  <span>Property Type</span>
+                  <span>{transactionFilter === 'All' ? 'Sales or Rentals' : transactionFilter}</span>
                   <span className="material-symbols-outlined text-[16px]">expand_more</span>
                 </button>
-                {typeOpen && (
+                {transactionOpen && (
                   <div className="absolute top-full left-0 mt-4 w-48 bg-surface border border-surface-variant z-10 shadow-sm">
-                    {(['All', 'Penthouse', 'Apartment', 'Villa'] as Filter[]).map((t) => (
+                    {(['All', 'Sales', 'Rentals'] as Transaction[]).map((t) => (
                       <button
                         key={t}
-                        onClick={() => { setTypeFilter(t); setTypeOpen(false) }}
-                        className={`block w-full text-left px-6 py-4 font-body-md text-body-md hover:bg-surface-container transition-colors ${typeFilter === t ? 'text-primary' : 'text-on-surface'}`}
+                        onClick={() => { setTransactionFilter(t); setTransactionOpen(false) }}
+                        className={`block w-full text-left px-6 py-4 font-body-md text-body-md hover:bg-surface-container transition-colors ${transactionFilter === t ? 'text-primary' : 'text-on-surface'}`}
                       >
-                        {t}
+                        {t === 'All' ? 'All Listings' : t}
                       </button>
                     ))}
                   </div>
                 )}
               </div>
-
-              <button className="flex items-center gap-2 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors uppercase">
-                <span>Price Range</span>
-                <span className="material-symbols-outlined text-[16px]">expand_more</span>
-              </button>
             </div>
 
             <div className="flex items-center gap-4">
@@ -232,7 +218,7 @@ export default function Properties() {
             <div className="py-24 text-center">
               <p className="font-body-lg text-body-lg text-on-surface-variant">No properties match the selected filters.</p>
               <button
-                onClick={() => { setTypeFilter('All'); setDistrictFilter('All') }}
+                onClick={() => { setCategoryFilter('All'); setTransactionFilter('All') }}
                 className="mt-8 border border-primary text-primary px-8 py-3 font-label-caps text-label-caps uppercase hover:bg-primary hover:text-on-primary transition-colors duration-500"
               >
                 Clear Filters

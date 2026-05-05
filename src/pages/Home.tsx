@@ -61,20 +61,20 @@ export default function Home() {
             >
               <form className="flex flex-col gap-6 w-full md:w-80">
                 <div className="relative border-b border-surface-container-lowest/50 pb-2">
-                  <label className="block font-label-caps text-label-caps text-surface-container-lowest/70 mb-2">Location</label>
-                  <input
-                    className="w-full bg-transparent border-none p-0 focus:ring-0 font-body-lg text-body-lg text-surface-container-lowest placeholder-surface-container-lowest/50 py-2 outline-none"
-                    placeholder="Monte Carlo"
-                    type="text"
-                  />
+                  <label className="block font-label-caps text-label-caps text-surface-container-lowest/70 mb-2">Category</label>
+                  <select className="w-full bg-transparent border-none p-0 focus:ring-0 font-body-lg text-body-lg text-surface-container-lowest py-2 outline-none appearance-none cursor-pointer">
+                    <option value="" className="text-on-background">Residential or Commercial</option>
+                    <option value="residential" className="text-on-background">Residential</option>
+                    <option value="commercial" className="text-on-background">Commercial</option>
+                  </select>
                 </div>
                 <div className="relative border-b border-surface-container-lowest/50 pb-2">
-                  <label className="block font-label-caps text-label-caps text-surface-container-lowest/70 mb-2">Property Type</label>
-                  <input
-                    className="w-full bg-transparent border-none p-0 focus:ring-0 font-body-lg text-body-lg text-surface-container-lowest placeholder-surface-container-lowest/50 py-2 outline-none"
-                    placeholder="Penthouse"
-                    type="text"
-                  />
+                  <label className="block font-label-caps text-label-caps text-surface-container-lowest/70 mb-2">Listing Type</label>
+                  <select className="w-full bg-transparent border-none p-0 focus:ring-0 font-body-lg text-body-lg text-surface-container-lowest py-2 outline-none appearance-none cursor-pointer">
+                    <option value="" className="text-on-background">Sales or Rentals</option>
+                    <option value="sale" className="text-on-background">Sales</option>
+                    <option value="rental" className="text-on-background">Rentals</option>
+                  </select>
                 </div>
                 <Link
                   to="/properties"

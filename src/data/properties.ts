@@ -10,8 +10,8 @@ export interface Property {
   tag?: string
   image: string
   imageAlt: string
-  category: 'penthouse' | 'apartment' | 'villa' | 'private'
-  district: 'Monte Carlo' | 'Fontvieille' | 'La Rousse' | 'La Condamine' | 'Other'
+  category: 'residential' | 'commercial'
+  transaction: 'sale' | 'rental'
 }
 
 export interface PropertyDetail extends Property {
@@ -36,8 +36,8 @@ export const properties: Property[] = [
     tag: 'New Listing',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBM7dwMZpkHs9uJ9bCuZMewuis3g-eIY-0Fb_Om9Jw3xo5PvdTlzrgTvC8Ezd2S5WECyI6x8xbm8K5TXOMmc2o7MP3i0bYaT2743bAT9Rlk68ogdlvXoglR2Rvq4Bww92u6LqRoMbITfaTKncV149gw27b_YONEx32bt6EippMNGImnjvYoIAIlM04S2yyO_j5JyKbYmQPhCl9ipf20xFqfPv0r6dFcrON13wkLBzDs3tGHtCnsR4zVAuJ4aKTgtBRd0NbhR7lJ-Xs',
     imageAlt: 'Luxury penthouse interior with floor-to-ceiling windows overlooking Monaco',
-    category: 'penthouse',
-    district: 'La Rousse',
+    category: 'residential',
+    transaction: 'sale',
   },
   {
     id: '2',
@@ -49,8 +49,8 @@ export const properties: Property[] = [
     sqm: 210,
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB-urWO9XLjrAluy6muWwVKMsF13PGLJ9lS_LxBvL_CvvdnR93oPUdob_9rqJm6ZizDVMtiFkP_aoa_wlMz8khaQD3yNuNUgnRD-Do4P4AFlzPVOYOosWIXFco6-OUV-6TDBCFWmclRN4nBQcZP5XQtZLWYvrOrm8l41uqTJtEHdr6RPjz10KLWZbenmlfqzLcz6SByruF-QP-mu0ckTwGUOZuvzT-xUqQhWxgitqfhiHEBfaBmPbzZBOUs3_D5ZaCOeZRDLzrgLR0',
     imageAlt: 'Sophisticated living area with wide-plank oak flooring in Monaco residence',
-    category: 'apartment',
-    district: 'Monte Carlo',
+    category: 'residential',
+    transaction: 'rental',
   },
   {
     id: '3',
@@ -62,8 +62,8 @@ export const properties: Property[] = [
     sqm: 800,
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCEljWII1F5rA68XOj8Ay5DBYFgNqrGrUYNOERAcbdbXJs8AUroPm7WXJo5qmG-mr1NaEYmyVgnzOplAQelRc_LfArfw3hpp9HNAPWDKqzgjhZtOuT32RLYoyNXe52VHl9-omxVT2xfBvpO0ugKFTtX3Zcq4vdo3gTnog-ciU0kEngC3ZF6iYoVtVg_BxNb1p8eZfQ7vohsAA44maqn1pbJQ4UP1ngN9pZkHZm0El-q9BIALikPPm6k3hbpDxIsVpAV64ty3IqD_s0',
     imageAlt: 'Contemporary Mediterranean villa with infinity pool overlooking the sea',
-    category: 'villa',
-    district: 'Other',
+    category: 'residential',
+    transaction: 'sale',
   },
   {
     id: '4',
@@ -75,8 +75,8 @@ export const properties: Property[] = [
     sqm: 145,
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCJFoC5K08jcaABdon6caXh1yCVRhEQ02dlaGgoET_I_AktIoj8P6TQiHR1Vi3IfZM10E6-5XxoIYWiHUS2dcRtRe2tK3Mooe5bUPNPQ7VTGKYMgxk_xycM84RFwcuQ23TcEogHiIJ8hYDglFhHqM9vpQhPrLc7qVgxnbK1j2mQTPzhMKO7T42cb4n_dLUKlODReH8yaT-BtpIqMeRUnYTAnkKGMrR2wkfihp_FOx6DXzjSt0x-CAJAddqdf3TeucTrKiTToWJAHv0',
     imageAlt: 'Minimalist luxury kitchen with marble countertops in Monaco property',
-    category: 'apartment',
-    district: 'La Condamine',
+    category: 'commercial',
+    transaction: 'rental',
   },
   {
     id: '5',
@@ -88,8 +88,8 @@ export const properties: Property[] = [
     sqm: 420,
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAxtUKM2lLYhEjFnvodRM61qCbtpURw4SPe_dmtTXb_hccQeN6VckHkomvRRuh9qW9I_vDBbSWowmM5078SIRDr9wtvTiyTaNPBVTXD56iNwnrU8nqbjejg2W6MkaaoP3lNLGSQZ2Khed9XCkPSBU-GQ_OVvVS4T7L878CNSeqV2PMYi6HVeIcN2zccXfl9IKeyAzrjzgI614rHhEuvCxSwbRCzWIBxmSvwZaUEF_AkyJIGHmp05Z9o7on-qHlS20GFLCMivhtgAvs',
     imageAlt: 'Serene master bedroom with panoramic sea view in Monaco penthouse',
-    category: 'penthouse',
-    district: 'Fontvieille',
+    category: 'residential',
+    transaction: 'sale',
   },
   {
     id: '6',
@@ -101,8 +101,8 @@ export const properties: Property[] = [
     sqm: 850,
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD0EP67YPXZoxeUGIJSOHVvYd73bGWUmF-kItfCeY6Kw37E5OBkQvIY9LxBaP8psAyNts4DVmzxITKqnSSk-88o5uZYECF_AW-Z11cHV7LSnEj6E6QQGDhPp8HLN7fgWGVfT7gxgtpGNu_1hzvRPqwGh72X7gEKw4xgcWzJZWs6r4DckiTsW-I03Wyc-be1F3pFcpr_YCY2-xcBxa0LL77Cux12XP71VEl1gZFyXRp5yAIWvCxpnR6FO7gulAgbAfRk546VVHTE5jI',
     imageAlt: 'Luxurious modern villa exterior in Monaco at golden hour',
-    category: 'villa',
-    district: 'Monte Carlo',
+    category: 'commercial',
+    transaction: 'sale',
   },
 ]
 
@@ -117,8 +117,8 @@ export const featuredProperties: Property[] = [
     sqm: 600,
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCOtOQZRVr10R0q459QN52dV8yeIBED0yQODD49jIeoNzCNVz-Zw9gtSBuRrEKEk5yYLmzGy3emdYMyfsfdOs-bo948uOhP5bsLdwqFDIbae7_iq9W80c0wY5XNgxUEs7W6ShMCsw2lf8bvX5ZQ3fn9w1VAK-BJYwBAn_em2H5DfpmnkUhMclZ0n86jL5FZ4ORI7ps0UE6ZhOaSGvQZ1FjbdK3UmiXBO4qywTTUTjW7ZEmkOy695tdXoQsVWoehnvfIxTBWCl7n0TQ',
     imageAlt: 'Ultra-modern luxury villa with infinity pool in Monaco',
-    category: 'villa',
-    district: 'Monte Carlo',
+    category: 'residential',
+    transaction: 'sale',
   },
   {
     id: 'f2',
@@ -130,8 +130,8 @@ export const featuredProperties: Property[] = [
     sqm: 280,
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDzKBYrPjUpY7r-r5WNfdKUMetKwTwPsltaGN51sgj_fAnmCASnxfeQqcrd1acBw2-f7aaHAr49dz3X7UsU7l-keOKFTEpaq6E4ovAV9ixZci4LqEkPl99i3PD7VuxxmhdstWX0wHNV11bxCks7u0I4zeJrR3wUJLKAwmC5sqVQS6_pYXLi3XaxcnARL7ly8yXyZc2P6YBNb8jjQGMzqPjjHuJsR3oBnZWBUgnlx6HwDZyTrCqF3j6mOApRnTrgE28mFmVTiGcOQgA',
     imageAlt: 'Elegant minimalist apartment interior in Carré d\'Or Monaco',
-    category: 'apartment',
-    district: 'Monte Carlo',
+    category: 'residential',
+    transaction: 'rental',
   },
   {
     id: 'f3',
@@ -143,8 +143,8 @@ export const featuredProperties: Property[] = [
     sqm: 500,
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDDXWlDOjjc0BYYz_d9tkEq5OggXgQYwS0foQu3KmGiKQs_AYxH5MpaOA8F1Ylrnqn7fU4SbZXlJobru4rNBdaj14xQyNzS1vf8i1wZ4mqF2t4VjTUUxm5LzGXOibtwxGpB2zzmz4k54OSnkmOPSJV9562EHAGhbSM24H4zeOlY7yEkfS9iCSxp8yhFtegOZW2s5HhZ1qGcZw-92Pd0AVfbreg6e6Fo9jOT2W39ylT3yZqWL2HWahVWTmyCv2YxcZlfVpSrR5Br0oE',
     imageAlt: 'Sophisticated minimalist bedroom in Monaco penthouse',
-    category: 'penthouse',
-    district: 'Fontvieille',
+    category: 'residential',
+    transaction: 'sale',
   },
 ]
 
@@ -162,8 +162,8 @@ export const propertyDetails: PropertyDetail = {
   parking: 4,
   image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD0EP67YPXZoxeUGIJSOHVvYd73bGWUmF-kItfCeY6Kw37E5OBkQvIY9LxBaP8psAyNts4DVmzxITKqnSSk-88o5uZYECF_AW-Z11cHV7LSnEj6E6QQGDhPp8HLN7fgWGVfT7gxgtpGNu_1hzvRPqwGh72X7gEKw4xgcWzJZWs6r4DckiTsW-I03Wyc-be1F3pFcpr_YCY2-xcBxa0LL77Cux12XP71VEl1gZFyXRp5yAIWvCxpnR6FO7gulAgbAfRk546VVHTE5jI',
   imageAlt: 'Luxurious modern villa exterior in Monaco at golden hour',
-  category: 'villa',
-  district: 'Monte Carlo',
+  category: 'residential',
+  transaction: 'sale',
   description: [
     'Situated in the heart of the Golden Square, Villa L\'Horizon represents a rare opportunity to acquire a truly exceptional property. Designed by world-renowned architects, this residence offers an unparalleled blend of privacy, expansive living spaces, and breathtaking panoramic views of the Mediterranean Sea and the Prince\'s Palace.',
     'Every detail has been meticulously curated, from the imported Italian marble flooring to the bespoke woodwork and state-of-the-art smart home integration. The vast expanses of glass blur the boundaries between interior and exterior, allowing natural light to flood the living areas while framing the iconic Monegasque landscape.',
