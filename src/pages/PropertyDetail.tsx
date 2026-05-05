@@ -4,12 +4,13 @@ import { motion, useInView } from 'framer-motion'
 import PageTransition from '../components/PageTransition'
 import { propertyDetails, properties } from '../data/properties'
 
-function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+function FadeIn({ children, delay = 0, className = '' }: { children: React.ReactNode; delay?: number; className?: string }) {
   const ref = useRef<HTMLDivElement>(null)
   const inView = useInView(ref, { once: true, margin: '-60px' })
   return (
     <motion.div
       ref={ref}
+      className={className}
       initial={{ opacity: 0, y: 24 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] }}
@@ -90,8 +91,8 @@ export default function PropertyDetail() {
 
         {/* Description & Specs */}
         <section className="max-w-container-max mx-auto px-6 md:px-24 mb-12 md:mb-section-padding grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-gutter">
-          <FadeIn>
-            <div className="lg:col-span-7 flex flex-col gap-4 md:gap-stack-md">
+          <FadeIn className="lg:col-span-7">
+            <div className="flex flex-col gap-4 md:gap-stack-md">
               <h2 className="font-headline-lg text-3xl md:text-headline-lg text-on-background">A Masterpiece of Modernism</h2>
               {'description' in property && (property as typeof propertyDetails).description.map((para, i) => (
                 <p key={i} className={`font-${i === 0 ? 'body-lg' : 'body-md'} ${i === 0 ? 'text-base md:text-body-lg' : 'text-sm md:text-body-md'} text-on-surface-variant leading-relaxed`}>
@@ -101,8 +102,8 @@ export default function PropertyDetail() {
             </div>
           </FadeIn>
 
-          <FadeIn delay={0.15}>
-            <div className="lg:col-span-4 lg:col-start-9 bg-surface-container-low p-6 md:p-12 flex flex-col gap-4 md:gap-stack-md border border-outline-variant/30">
+          <FadeIn delay={0.15} className="lg:col-span-4 lg:col-start-9">
+            <div className="bg-surface-container-low p-6 md:p-12 flex flex-col gap-4 md:gap-stack-md border border-outline-variant/30">
               <h3 className="font-label-caps text-[10px] md:text-label-caps text-on-background uppercase border-b border-outline-variant pb-4">
                 Property Details
               </h3>
